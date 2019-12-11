@@ -43,7 +43,15 @@ const counter = (state = 0, action) => {
             break;
     }
 }
-//DISPATCHER : 
+
+let store = createStore(counter)
+//display in the console 
+store.subscribe(()=>console.log(store.getState()))
+
+//DISPATCHER :  Executes the actions 
+
+store.dispatch(increment())
+
 
 
 

@@ -1,5 +1,5 @@
 
-const counterReducer = (state = false, action) => {
+const loggedReducer = (state = false, action) => {
     switch (action.type) {
         case "INCREMENT":
             return state + 1;
@@ -15,4 +15,4 @@ const counterReducer = (state = false, action) => {
 
 
 
-export default counterReducer;
+export default loggedReducer;

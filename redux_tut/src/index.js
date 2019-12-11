@@ -4,7 +4,34 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+ import {createStore} from 'redux';
+
+//STORE : GLOBALIZED STATE
+
+
+//ACTION : Describes what you intend to do : a simple function that returns an object 
+
+const increment = ()=>{
+    return{
+        type:'INCREMENT'
+    }
+}
+
+
+const decrement = ()=>{
+    return{
+        type:'DECREMENT'
+    }
+}
+
+//REDUCER : Describes how you action transform the state into the next state 
+
+//DISPATCHER : 
+
+
+
 ReactDOM.render(<App />, document.getElementById('root'));
+
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

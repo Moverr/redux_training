@@ -1,0 +1,50 @@
+
+//STORE : GLOBALIZED STATE
+
+
+//ACTION : Describes what you intend to do : a simple function that returns an object 
+
+const increment = () => {
+    return {
+        type: 'INCREMENT'
+    }
+}
+
+
+const decrement = () => {
+    return {
+        type: 'DECREMENT'
+    }
+}
+
+//REDUCER : Describes how you action transform the state into the next state 
+
+const counter = (state = 0, action) => {
+
+    switch (action.type) {
+        case "DECREMENT":
+            return state - 1;
+            break;
+
+        case "INCREMENT":
+            return state + 1;
+            break;
+
+
+        default:
+            return state;
+            break;
+    }
+}
+
+let store = createStore(counter)
+//display in the console 
+store.subscribe(()=>console.log(store.getState()))
+
+//DISPATCHER :  Executes the actions 
+
+store.dispatch(increment())
+store.dispatch(increment())
+store.dispatch(increment())
+
+

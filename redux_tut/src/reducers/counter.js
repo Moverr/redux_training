@@ -1,10 +1,11 @@
+
 const counterReducer = (state = 0  , action)=>{
 switch (action.type) {
     case "INCREMENT":
             return state + 1;
         break;
         case "DECREMENT":
-                return state + 1;
+                return state - 1;
             break;
 
     default:
@@ -12,3 +13,7 @@ switch (action.type) {
         break;
 }
 }
+
+
+
+export default counterReducer;

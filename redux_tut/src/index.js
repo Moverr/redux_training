@@ -51,6 +51,9 @@ store.subscribe(()=>console.log(store.getState()))
 //DISPATCHER :  Executes the actions 
 
 store.dispatch(increment())
+store.dispatch(increment())
+store.dispatch(increment())
+
 
 
 
